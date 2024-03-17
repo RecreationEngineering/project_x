@@ -74,7 +74,6 @@ if [ $ARCH = "aarch64" ]; then
 elif [ $ARCH = "x86_64" ]; then
 	set -x
 	$SUDO docker run --gpus all -it --rm --network host \
-		--privileged \
 		--volume $ROOT:/app \
 		$DISPLAY_DEVICE \
 		$V4L2_DEVICES \

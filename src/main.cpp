@@ -3,8 +3,6 @@
 
 int main(int argc, char *argv[]) {
 
-    printf("Starting\n");
-
     gst_init(&argc, &argv);
 
     GstElement *pipeline = gst_pipeline_new("image-display-pipeline");
@@ -42,6 +40,5 @@ int main(int argc, char *argv[]) {
     gst_element_set_state(pipeline, GST_STATE_NULL);
     gst_object_unref(pipeline);
 
-    printf("Finished\n");
     return 0;
 }
