@@ -106,10 +106,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
     
 
     RUN mkdir -p /catkin_ws/src \
-        cd /catkin_ws/ \
-        catkin_make
+        && cd /catkin_ws/
 
-    COPY . /catkin_ws
+    # COPY . /catkin_ws
     
     # Set up a working directory
     WORKDIR /catkin_ws

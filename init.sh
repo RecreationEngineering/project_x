@@ -66,7 +66,7 @@ CONTAINER=lozanomt/project_x:latest
 if [ $ARCH = "aarch64" ]; then
 	set -x
 	$SUDO docker run --runtime nvidia -it --rm --network host \
-		--volume $ROOT:/app \
+		--volume $ROOT:/catkin_ws \
 		$DISPLAY_DEVICE \
         $V4L2_DEVICES \
 		$CONTAINER
@@ -74,7 +74,7 @@ if [ $ARCH = "aarch64" ]; then
 elif [ $ARCH = "x86_64" ]; then
 	set -x
 	$SUDO docker run --gpus all -it --rm --network host \
-		--volume $ROOT:/app \
+		--volume $ROOT:/catkin_ws \
 		$DISPLAY_DEVICE \
 		$V4L2_DEVICES \
 		$CONTAINER
